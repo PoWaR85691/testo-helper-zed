@@ -41,7 +41,20 @@ let settings = {
   enableMacroHover: true,
 };
 
-const RESERVED_KEYWORDS = ['if', 'for', 'while', 'switch', 'do', 'else'];
+// Reserved Testo keywords (language specification, "Базовые конструкции
+// языка"). Used to avoid mistaking a keyword for a macro reference.
+const RESERVED_KEYWORDS = [
+  // Declarations.
+  'machine', 'flash', 'network', 'param', 'image', 'test', 'macro', 'include',
+  // Conditions and loops.
+  'if', 'else', 'for', 'IN', 'RANGE', 'break', 'continue',
+  // Actions and modifiers.
+  'start', 'stop', 'shutdown', 'snapshot', 'repl', 'screenshot',
+  'press', 'hold', 'release', 'type',
+  'mouse', 'touch', 'wait', 'check', 'sleep', 'timeout', 'interval',
+  'plug', 'unplug', 'exec', 'copyto', 'copyfrom', 'remotefile',
+  'ram', 'cpu', 'battery', 'charging', 'lid', 'print', 'abort', 'step',
+];
 const IMG_MAX_BYTES = 70 * 1024;
 
 const INCLUDE_RE = /include\s+"((?:[^"\\]|\\.)+)"/;
@@ -147,7 +160,7 @@ connection.onRequest('initialize', params => {
       codeActionProvider: true,
       workspace: { configuration: true },
     },
-    serverInfo: { name: 'testo-helper-lsp', version: '1.0.0' },
+    serverInfo: { name: 'testo-helper-lsp', version: '1.0.1' },
   };
 });
 

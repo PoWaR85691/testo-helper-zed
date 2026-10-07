@@ -1,6 +1,6 @@
 id = "testo-helper"
 name = "Testo Helper"
-version = "1.0.0"
+version = "1.0.1"
 schema_version = 1
 authors = ["Vladislav Printsev"]
 description = "Testo language support: syntax highlighting, snippets, hover documentation, go-to-definition, image previews, step counter, formatting and Jira integration."
@@ -16,7 +16,7 @@ snippets = ["./snippets/testo.json"]
 # development a `file://` URL also works.
 [grammars.testo]
 repository = "https://github.com/PoWaR85691/tree-sitter-testo"
-rev = "5bdb7480a5236530b3b4988c687c75e18a76994a"
+rev = "28c554949f628ff3d88b1eb066ebf624d559309e"
 
 # The language server is started by `src/lib.rs` (Zed's bundled Node runtime).
 [language_servers.testo-helper-lsp]

@@ -15,6 +15,7 @@
 (number) @number
 (time_interval) @number
 (size_specifier) @number
+(angle_specifier) @number
 (boolean) @boolean
 
 (control_keyword) @keyword
