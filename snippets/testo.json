@@ -1,0 +1,213 @@
+{
+  "Шаблон цикла For": {
+    "prefix": "forr",
+    "body": [
+      "for (i IN RANGE ${1:N}){",
+      "\t$0",
+      "}"
+    ],
+    "description": "Вставляет цикл For с индексом i и циклом по N"
+  },
+  "Шаблон для бага": {
+    "prefix": "bugg",
+    "body": [
+      "if (check \"${1:...}\" timeout 10s) {",
+      "\tprint \"Bug BT-${2:XXXXX}\"",
+      "}$0"
+    ],
+    "description": "Вставляет шаблон проверки и вывода бага с указанием номера"
+  },
+  "Шаблон цикла for": {
+    "prefix": "fr",
+    "body": [
+      "for (i IN RANGE 0 ${1:3}){",
+      "\t$0",
+      "}"
+    ],
+    "description": "Подставляет шаблонную конструкцию цикла for с переменной i для итерирования"
+  },
+  "Шаблон условия if check": {
+    "prefix": "ifc",
+    "body": [
+      "if (check \"${1:Text}\" timeout ${2:1}s){",
+      "\t$0",
+      "}"
+    ],
+    "description": "Подставляет шаблонную конструкцию условия if для поиска текста на экране"
+  },
+  "Шаблон обратного условия if check": {
+    "prefix": "ifnc",
+    "body": [
+      "if ( NOT (check \"${1:Text}\" timeout ${2:1}s)){",
+      "\t$0",
+      "}"
+    ],
+    "description": "Подставляет шаблонную конструкцию обратного условия if для поиска текста на экране"
+  },
+  "Шаблон условия if strequal": {
+    "prefix": "ifs",
+    "body": [
+      "if (\"${1:Text}\" STREQUAL \"${2:Text}\"){",
+      "\t$0",
+      "}"
+    ],
+    "description": "Подставляет шаблонную конструкцию условия if для сравнения равенства строк"
+  },
+  "Шаблон обратного условия if strequal": {
+    "prefix": "ifns",
+    "body": [
+      "if ( NOT (\"${1:Text}\" STREQUAL \"${2:Text}\")){",
+      "\t$0",
+      "}"
+    ],
+    "description": "Подставляет шаблонную конструкцию обратного условия if для сравнения равенства строк"
+  },
+  "Шаблон нажатия Alt+F*": {
+    "prefix": "altF",
+    "body": [
+      "hold LEFTALT; press F${1:4}; release LEFTALT"
+    ],
+    "description": "Подставляет шаблонную конструкцию нажатия клавиш Alt + F*"
+  },
+  "Шаблон нажатия Alt+Tab": {
+    "prefix": "altT",
+    "body": [
+      "hold LEFTALT; press TAB; release LEFTALT"
+    ],
+    "description": "Подставляет шаблонную конструкцию нажатия клавиш Alt + Tab"
+  },
+  "Шаблон нажатия Win+R": {
+    "prefix": "winR",
+    "body": [
+      "hold LEFTMETA; press R; release LEFTMETA"
+    ],
+    "description": "Подставляет шаблонную конструкцию нажатия клавиш Win + R"
+  },
+  "Шаблон нажатия Win+D": {
+    "prefix": "winD",
+    "body": [
+      "hold LEFTMETA; press D; release LEFTMETA"
+    ],
+    "description": "Подставляет шаблонную конструкцию нажатия клавиш Win + D"
+  },
+  "Шаблон ЛКМ по координатам": {
+    "prefix": "mc",
+    "body": [
+      "mouse click ${1:0} ${2:0}"
+    ],
+    "description": "Подставляет шаблонную конструкцию для mouse click по координатам"
+  },
+  "Шаблон ЛКМ по тексту": {
+    "prefix": "mc\"",
+    "body": [
+      "mouse click \"${1:Text}\""
+    ],
+    "description": "Подставляет шаблонную конструкцию для mouse click по тексту"
+  },
+  "Шаблон ЛКМ по изображению": {
+    "prefix": "mci",
+    "body": [
+      "mouse click img \"${1:IMG path}\""
+    ],
+    "description": "Подставляет шаблонную конструкцию для mouse click по изображению"
+  },
+  "Шаблон двойного ЛКМ по координатам": {
+    "prefix": "mdc",
+    "body": [
+      "mouse dclick ${1:0} ${2:0}"
+    ],
+    "description": "Подставляет шаблонную конструкцию для mouse dclick по координатам"
+  },
+  "Шаблон двойного ЛКМ по тексту": {
+    "prefix": "mdc\"",
+    "body": [
+      "mouse dclick \"${1:Text}\""
+    ],
+    "description": "Подставляет шаблонную конструкцию для mouse dclick по тексту"
+  },
+  "Шаблон двойного ЛКМ по изображению": {
+    "prefix": "mdci",
+    "body": [
+      "mouse dclick img \"${1:IMG path}\""
+    ],
+    "description": "Подставляет шаблонную конструкцию для mouse dclick по изображению"
+  },
+  "Шаблон ПКМ по координатам": {
+    "prefix": "mrc",
+    "body": [
+      "mouse rclick ${1:0} ${2:0}"
+    ],
+    "description": "Подставляет шаблонную конструкцию для mouse rclick по координатам"
+  },
+  "Шаблон ПКМ по тексту": {
+    "prefix": "mrc\"",
+    "body": [
+      "mouse rclick \"${1:Text}\""
+    ],
+    "description": "Подставляет шаблонную конструкцию для mouse rclick по тексту"
+  },
+  "Шаблон ПКМ по изображению": {
+    "prefix": "mrci",
+    "body": [
+      "mouse rclick img \"${1:IMG path}\""
+    ],
+    "description": "Подставляет шаблонную конструкцию для mouse rclick по изображению"
+  },
+  "Шаблон перемещения курсора мыши по координатам": {
+    "prefix": "mm",
+    "body": [
+      "mouse move ${1:0} ${2:0}"
+    ],
+    "description": "Подставляет шаблонную конструкцию для mouse move по координатам"
+  },
+  "Шаблон перемещения курсора мыши по тексту": {
+    "prefix": "mm\"",
+    "body": [
+      "mouse move \"${1:Text}\""
+    ],
+    "description": "Подставляет шаблонную конструкцию для mouse move по тексту"
+  },
+  "Шаблон перемещения курсора мыши по изображению": {
+    "prefix": "mmi",
+    "body": [
+      "mouse move img \"${1:IMG path}\""
+    ],
+    "description": "Подставляет шаблонную конструкцию для mouse move по изображению"
+  },
+  "Шаблон ожидания wait для текста": {
+    "prefix": "w",
+    "body": [
+      "wait \"${1:Text}\""
+    ],
+    "description": "Подставляет шаблонную конструкцию ожидания wait для поиска текста на экране"
+  },
+  "Шаблон ожидания wait для изображения": {
+    "prefix": "wi",
+    "body": [
+      "wait img \"${1:IMG path}\""
+    ],
+    "description": "Подставляет шаблонную конструкцию ожидания wait для поиска изображения на экране"
+  },
+  "Шаблон ожидания wait для текста с timeout": {
+    "prefix": "wt",
+    "body": [
+      "wait \"${1:Text}\" timeout ${2:60}s"
+    ],
+    "description": "Подставляет шаблонную конструкцию ожидания wait для поиска текста на экране с параметром timeout"
+  },
+  "Шаблон ожидания wait для изображения с timeout": {
+    "prefix": "wit",
+    "body": [
+      "wait img \"${1:IMG path}\" timeout ${2:60}s"
+    ],
+    "description": "Подставляет шаблонную конструкцию ожидания wait для поиска изображения на экране с параметром timeout"
+  },
+  "Шаблон добавления CPU": {
+    "prefix": "cpuadd",
+    "body": [
+      "cpu add ${1:2}",
+      "exec bash \"\"\"echo 1 | tee /sys/devices/system/cpu/cpu*/online\"\"\""
+    ],
+    "description": "Подставляет конструкцию добавления CPU и включения новых ядер через exec bash"
+  }
+}

@@ -1,0 +1,8 @@
+/target
+Cargo.lock
+server/node_modules
+
+# Build artifacts, created by Zed when installing the extension
+# as a dev extension (embedded clone of the grammar + compiled wasm).
+/grammars/
+*.wasm

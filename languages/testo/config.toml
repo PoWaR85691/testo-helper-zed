@@ -1,0 +1,20 @@
+name = "Testo"
+grammar = "testo"
+path_suffixes = ["testo"]
+line_comments = ["#"]
+tab_size = 4
+hard_tabs = false
+
+# Indentation rules that don't depend on the syntax tree.
+increase_indent_pattern = "\\{\\s*$"
+decrease_indent_pattern = "^\\s*\\}"
+
+brackets = [
+  { start = "{", end = "}", close = true, newline = true },
+  { start = "[", end = "]", close = true, newline = false },
+  { start = "(", end = ")", close = true, newline = false },
+  { start = "\"", end = "\"", close = true, newline = false, not_in = ["string", "comment"] },
+]
+
+[overrides.string]
+word_characters = ["$", "<", ">", "{", "}"]

@@ -1,0 +1,27 @@
+id = "testo-helper"
+name = "Testo Helper"
+version = "1.0.0"
+schema_version = 1
+authors = ["Vladislav Printsev"]
+description = "Testo language support: syntax highlighting, snippets, hover documentation, go-to-definition, image previews, step counter, formatting and Jira integration."
+repository = "https://github.com/PoWaR85691/testo-helper-zed"
+
+# Native Zed snippets (see ./snippets/testo.json).
+snippets = ["./snippets/testo.json"]
+
+# The tree-sitter grammar is loaded from a Git repository, not from the
+# extension bundle. Its source lives in the sibling repository
+# `tree-sitter-testo` (https://github.com/PoWaR85691/tree-sitter-testo); `rev`
+# must point at a commit that contains the generated `src/parser.c`. For local
+# development a `file://` URL also works.
+[grammars.testo]
+repository = "https://github.com/PoWaR85691/tree-sitter-testo"
+rev = "5bdb7480a5236530b3b4988c687c75e18a76994a"
+
+# The language server is started by `src/lib.rs` (Zed's bundled Node runtime).
+[language_servers.testo-helper-lsp]
+name = "Testo Helper LSP"
+languages = ["Testo"]
+
+[language_servers.testo-helper-lsp.language_ids]
+"Testo" = "testo"
