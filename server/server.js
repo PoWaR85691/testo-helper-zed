@@ -160,7 +160,7 @@ connection.onRequest('initialize', params => {
       codeActionProvider: true,
       workspace: { configuration: true },
     },
-    serverInfo: { name: 'testo-helper-lsp', version: '1.0.1' },
+    serverInfo: { name: 'testo-helper-lsp', version: '1.0.2' },
   };
 });
 

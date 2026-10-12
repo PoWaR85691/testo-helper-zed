@@ -1,6 +1,6 @@
 id = "testo-helper"
 name = "Testo Helper"
-version = "1.0.1"
+version = "1.0.2"
 schema_version = 1
 authors = ["Vladislav Printsev"]
 description = "Testo language support: syntax highlighting, snippets, hover documentation, go-to-definition, image previews, step counter, formatting and Jira integration."

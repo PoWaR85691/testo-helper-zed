@@ -16,5 +16,8 @@ brackets = [
   { start = "\"", end = "\"", close = true, newline = false, not_in = ["string", "comment"] },
 ]
 
-[overrides.string]
-word_characters = ["$", "<", ">", "{", "}"]
+# NB: deliberately no `[overrides.string] word_characters` entry here.
+# Marking `${`, `$<`, ... as word characters makes the word-based completion
+# swallow the prefix: completing `"${PAR<Tab>"` would replace `${PAR` and
+# produce `"PARAM1}"` instead of `"${PARAM1}"`. The default already treats
+# letters, digits and `_` as word characters, which is all Testo needs.
